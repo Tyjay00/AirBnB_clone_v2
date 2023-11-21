@@ -29,7 +29,7 @@ def hbnb():
 @app.route("/c/<text>", strict_slashes=False)  # Define the route for the '/c/<text>' page
 def c(text):
     """This function is called when the '/c/<text>' route of the app is accessed.
-    
+
     Args:
         text (str): The text to be displayed after 'C '
     """
@@ -41,7 +41,7 @@ def c(text):
 @app.route("/python/<text>", strict_slashes=False)  # Define the route for the '/python/<text>' page
 def python(text="is cool"):
     """This function is called when the '/python' or '/python/<text>' route of the app is accessed.
-    
+
     Args:
         text (str): The text to be displayed after 'Python ', defaults to 'is cool'
     """
@@ -52,7 +52,7 @@ def python(text="is cool"):
 @app.route("/number/<int:n>", strict_slashes=False)  # Define the route for the '/number/<n>' page
 def number(n):
     """This function is called when the '/number/<n>' route of the app is accessed.
-    
+
     Args:
         n (int): The number to be displayed
     """

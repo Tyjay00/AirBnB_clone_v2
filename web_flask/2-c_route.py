@@ -27,7 +27,7 @@ def hbnb():
 @app.route("/c/<text>", strict_slashes=False)  # Define the route for the '/c/<text>' page
 def c(text):
     """This function is called when the '/c/<text>' route of the app is accessed.
-    
+
     Args:
         text (str): The text to be displayed after 'C '
     """
