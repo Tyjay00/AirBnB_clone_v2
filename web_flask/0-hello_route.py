@@ -1,20 +1,16 @@
 #!/usr/bin/python3
-"""This script starts a Flask web application.
+"""Starts a Flask web application."""
 
-The application listens on 0.0.0.0, port 5000.
-Routes:
-    /: Displays 'Hello HBNB!'
-"""
-from flask import Flask  # Import the Flask module
+from flask import Flask
 
-app = Flask(__name__)  # Create an instance of the Flask class
+app = Flask(__name__)
 
-
-@app.route("/", strict_slashes=False)  # Define the route for the index page
+@app.route('/', strict_slashes=False)
 def hello_hbnb():
-    """This function is called when the root '/' route of the app is accessed."""
-    return "Hello HBNB!"  # Return the string to be displayed on the webpage
-
+    """Displays 'Hello HBNB!'"""
+    return "Hello HBNB!"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")  # Run the Flask application
+    # Start Flask dev server
+    # Listen on all available network interfaces (0.0.0.0) and port 5000
+    app.run(host='0.0.0.0', port=5000)
