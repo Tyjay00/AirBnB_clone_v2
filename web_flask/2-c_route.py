@@ -1,31 +1,26 @@
 #!/usr/bin/python3
-"""Starts a Flask web application."""
-
-from flask import Flask, request
-
+""" Starts a Flash Web Application C is FUN"""
+from flask import Flask
 app = Flask(__name__)
 
-# Define the route for the root URL '/'
+
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
-    """Displays 'Hello HBNB!'."""
-    return "Hello HBNB!"
+    """ Prints a Message when / is called """
+    return 'Hello HBNB!'
 
-# Define the route for '/hbnb'
+
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """Displays 'HBNB'."""
-    return "HBNB"
+    """ Prints a Message when /hbnb is called """
+    return 'HBNB'
 
-# Define the route for '/c/<text>'
+
 @app.route('/c/<text>', strict_slashes=False)
-def c_route(text):
-    """Displays 'C ' followed by the value of the text variable <text>."""
-    # Replace underscore with spaces in the text variable
-    formatted_text = text.replace('_', ' ')
-    return "C {}".format(formatted_text)
+def c_is_fun(text):
+    """ Prints a Message when /c is called """
+    return "C " + text.replace('_', ' ')
 
 if __name__ == "__main__":
-    # Start Flask dev server
-    # Listen on all available network interfaces (0.0.0.0) and port 5000
+    """ Main Function """
     app.run(host='0.0.0.0', port=5000)
