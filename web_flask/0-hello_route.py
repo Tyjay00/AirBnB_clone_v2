@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-"""Start a flask web app
+#!/usr/bin/python3i
+"""Start a Flask web application with a single route.
 """
 
 from flask import Flask
